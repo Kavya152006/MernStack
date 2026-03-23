@@ -1,0 +1,26 @@
+const fs = require('fs'); 
+Create / Write File 
+fs.writeFile('file.txt', 'Hello', callback); 
+Append Data 
+fs.appendFile('file.txt', ' World', callback); 
+Read File 
+fs.readFile('file.txt', 'utf8', callback); 
+Delete File 
+fs.unlink('file.txt', callback); 
+Create Folder 
+fs.mkdir('myFolder', callback); 
+Read Folder 
+fs.readdir('myFolder', callback); 
+const fs = require('fs'); 
+const path = require('path'); 
+// Create file in the same folder as this JS file 
+const filePath = path.join(__dirname, 'src.txt'); 
+const content = "HTML, CSS, JavaScript, TypeScript, MongoDB, Express.js, React.js, 
+Node.js"; 
+fs.writeFile(filePath, content, (err) => { 
+if (err) { 
+console.error("Error:", err); 
+} else { 
+console.log("src.txt file created successfully"); 
+} 
+}); 
